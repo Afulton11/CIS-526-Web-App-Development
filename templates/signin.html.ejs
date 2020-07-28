@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Sign In</h1>
+  <p>Don't have an account? <a href="/signup">Sign up here.</a></p>
+  <form method="POST">
+    <div class="error-message">
+      <%= errorMessage %>
+    </div>
+
+    <div class="form-group">
+      <label class="required" for="email">Email</label>
+      <input type="text" name="email" required />
+    </div>
+    <div class="form-group">
+      <label class="required" for="passsword">Password</label>
+      <input type="password" name="password" required />
+    </div>
+    <div class="form-group">
+      <small class="helper-text">
+        <span class="required"></span>field is required.
+      </small>
+    </div>
+    <input type="submit" value="Sign In" />
+  </form>
+</div>

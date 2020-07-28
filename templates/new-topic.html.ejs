@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Create a Topic</h1>
+
+  <form method="POST" action="/forum/topics">
+    <div class="error-message">
+      <%= errorMessage %>
+    </div>
+
+    <div class="form-group">
+      <label class="required" for="subject">Subject</label>
+      <input type="text" name="subject" required></input>
+      <small class="helper-text">
+        The subject considered for posts under this topic.
+      </small>
+    </div>
+
+    <div class="form-group">
+      <small class="helper-text">
+        <span class="required"></span>field is required.
+      </small>
+    </div>
+
+    <input type="submit" value="Create Topic" />
+  </form>
+</div>

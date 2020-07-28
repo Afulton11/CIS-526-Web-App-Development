@@ -1,0 +1,76 @@
+/** site.js 
+ * You should add your CSS code to this file.  
+ * See the assignment description in Guide for what
+ * your code needs to accomplish.
+ */
+.standard-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+  border: none;
+
+  /* Prevent words from un-aligning the table */
+  word-break: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.standard-container > * {
+  padding: 5px;
+  border: 1px solid lightgray;
+}
+
+.standard-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+  background-color: lightgray;
+  border: none;
+}
+
+.item-header {
+  display: none;
+}
+
+.description {
+  color: gray;
+  font-style: italic;
+}
+
+.rule-desktop {
+  color: black;
+  font-style: normal;
+  padding-bottom: 5px;
+}
+
+.more-href {
+  display: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.hidden-on-mobile {
+  display: inherit;
+}
+
+.hidden-on-desktop {
+  display: none;
+}
+
+.hidable-on-mobile {
+  display: inherit;
+}
+
+@media (max-width: 975px) and (min-width: 700px) {
+  .hidden-on-medium {
+    display: none !important;
+  }
+
+  .standard-container {
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  }
+
+  .standard-header {
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <%- head %>
+    <link href="/static/site.css" rel="stylesheet" />
+  </head>
+  <body class="nav-menu-margin">
+    <div class="nav">
+      <div class="container">
+        <a class="nav-header" href="/">
+          <img class="logo" src="/static/assets/csta-logo.png" />
+        </a>
+        <div class="nav-menus">
+          <div class="session-bar">
+            <div class="session-text">
+              <% if (locals.user) { %>
+              <span>
+                Welcome <%= (user.first + " " + user.last) %>!
+                <a href="/signout">Logout</a>
+              </span>
+              <% } else { %>
+              <span>
+                <a href="/signin">Login</a>
+                <a href="/signup">Register</a>
+              </span>
+              <% } %>
+            </div>
+          </div>
+
+          <ul class="nav-menu">
+            <li>
+              <a href="/">KCSTA Home</a>
+            </li>
+            <li>
+              <a href="/standards">Our Standards</a>
+            </li>
+            <li>
+              <a href="/forum">Forum</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <%- body %>
+    <footer>
+      <div>
+        <p>
+          Site created by Andrew Fulton.
+          <br />
+          CIS-526 Web Development @ Kansas State University.
+        </p>
+      </div>
+    </footer>
+    <%- scripts %>
+    <!-- This last line isn't loaded all the way in my browser? -->
+  </body>
+</html>

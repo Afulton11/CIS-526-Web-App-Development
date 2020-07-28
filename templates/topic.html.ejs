@@ -1,0 +1,26 @@
+<div class="container">
+  <h1><%= locals.topic.subject %></h1>
+  <div class="container">
+    <% if (!locals.topicPosts || locals.topicPosts.length <= 0) { %>
+    <div class="error-message">
+      No posts exist in this topic!
+      <a href="<%= `/forums/topics/${locals.topic.id}/posts/new` %>"
+        >Create one here.</a
+      >
+    </div>
+    <% } else { %>
+    <div class="container">
+      <% for (const post of locals.topicPosts) { %>
+      <p>
+        <%= post.body %>
+        <strong>Created by <%= `${post.author} on ${post.date}` %></strong>
+      </p>
+      <% } %> <% } %>
+    </div>
+    <p>
+      <a href="<%= `/forums/topics/${locals.topic.id}/posts/new` %>"
+        >Create a new Post in this topic.</a
+      >
+    </p>
+  </div>
+</div>

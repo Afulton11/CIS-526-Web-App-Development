@@ -1,0 +1,81 @@
+<div class="container">
+  <h1>Sign Up</h1>
+  <p>Already have an account? <a href="/signin">Sign in here.</a></p>
+  <form class="center-horizontal" method="POST">
+    <div class="error-message">
+      <%= errorMessage %>
+    </div>
+
+    <div class="form-group">
+      <label class="required" for="first">First Name</label>
+      <input
+        type="text"
+        name="first"
+        required
+        aria-describedby="first-helper"
+      />
+      <small class="helper-text" id="first-helper">
+        Enter your first name.
+      </small>
+    </div>
+    <div class="form-group">
+      <label class="required" for="last">Last Name</label>
+      <input type="text" name="last" required aria-describedby="last-helper" />
+      <small class="helper-text" id="last-helper">
+        Enter your last name.
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="organization">Organization</label>
+      <input
+        type="text"
+        name="organization"
+        aria-describedby="organization-helper"
+      />
+      <small class="helper-text" id="organization-helper">
+        Enter the name of your organization.
+      </small>
+    </div>
+    <div class="form-group">
+      <label class="required" for="role">Role:</label>
+      <select name="role" required aria-describedby="role-helper">
+        <option value="Teacher">Teacher</option>
+        <option value="Researcher">Researcher</option>
+        <option value="KSDE">KSDE</option>
+        <option value="University Liason">University Liason</option>
+        <option value="Other">Other</option>
+      </select>
+      <small class="helper-text" id="role-helper">
+        Select your role.
+      </small>
+    </div>
+    <div class="form-group">
+      <label class="required" for="email">Email</label>
+      <input
+        type="text"
+        name="email"
+        required
+        aria-describedby="email-helper"
+      />
+      <small class="helper-text" id="email-helper">
+        Enter a valid email address. e.g. "JohnDoe@apple.com"
+      </small>
+    </div>
+    <div class="form-group">
+      <label class="required" for="passsword">Password</label>
+      <input type="password" name="password" required />
+    </div>
+    <div class="form-group">
+      <label class="required" for="passwordConfirmation"
+        >Password Confirmation</label
+      >
+      <input type="password" name="passwordConfirmation" required />
+    </div>
+    <div class="form-group">
+      <small class="helper-text">
+        <span class="required"></span>field is required.
+      </small>
+    </div>
+    <input type="submit" value="Create Account" />
+  </form>
+</div>

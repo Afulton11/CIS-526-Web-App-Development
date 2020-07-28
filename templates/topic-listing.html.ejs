@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Forum Topics</h1>
+  <div class="container">
+    <% if (!locals.topics || locals.topics.length == 0) { %>
+    <p>No topics exist yet.<a href="/forum/topics/new">Create one here.</a></p>
+    <% } else { %>
+    <div class="container">
+      <% for (const topic of locals.topics) { %>
+      <div>
+        <h4>
+          <a href="<%= `/forum/topics/${topic.id}` %>"><%= topic.subject %></a>
+        </h4>
+        <div class="container">
+          <small class="helper-text">
+            Created by <%= topic.creator %>, Last updated on <%= new
+            Date(topic.date).toString() %>
+          </small>
+        </div>
+      </div>
+      <% } %>
+    </div>
+    <% } %>
+    <p>
+      <a href="/forum/topics/new">Create a new Forum Topic</a>
+    </p>
+  </div>
+</div>
